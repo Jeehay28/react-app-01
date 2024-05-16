@@ -1,15 +1,31 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import List from './component/List';
+import List1 from './component/List1';
+import List2 from './component/List2';
+import Layout from './component/Layout';
+import Login from './component/Login';
+import Home from './component/Home';
+import ListElect from './component/ListElec';
 
+import { Route, Routes, BrowserRouter } from 'react-router-dom';
 function App() {
   return (
-    <div>
-      <List />
+    <>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Login />}/>
 
-    </div>
-  
+      <Route element={<Layout />}>
+        <Route path="/home" element={<Home />}/>
+        <Route path="/list1" element={<List1 />} />
+        <Route path="/list2" element={<List2 />} />
+        <Route path="/list3" element={<ListElect />} />
+      </Route>
+    </Routes>
+    </BrowserRouter>
+    </>
+    
   );
 }
 
