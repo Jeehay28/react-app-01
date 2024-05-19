@@ -19,7 +19,7 @@ const Login = () => {
     <>
       <CenterBox>
       <LoginForm >
-          <h2 className="form-group">Login</h2>
+          <h2 className="form-group">산림청 국립수목원 어린이생물도감서비스</h2>
           <div className="form-group">
             <label htmlFor="email">Email</label>
             <input type="email" id="email" name="email" required />
@@ -31,10 +31,10 @@ const Login = () => {
           <button type="submit"
           onClick={handleSubmit}
           
-          >Login</button>
+          >Welcome</button>
           
           <p>
-            Don't have an account? <a href="#">Sign up</a>
+            Don't have an account? <a href="/home">Sign up</a>
           </p>
         </LoginForm>
       </CenterBox>
