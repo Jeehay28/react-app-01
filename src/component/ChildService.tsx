@@ -69,6 +69,10 @@ const ChildService: React.FC = () => {
     }
   };
 
+  const secureUrl = (url: string) => {
+    return url.startsWith("http://") ? url.replace("http://", "https://") : url;
+  };
+
   if (data) {
     return (
       <>
@@ -92,7 +96,7 @@ const ChildService: React.FC = () => {
               <img src={data.imgUrl2} alt="Image 2" />
             )}
             {data.imgUrl3 !== "NONE" && (
-              <img src={data.imgUrl2} alt="Image 3" />
+              <img src={data.imgUrl3} alt="Image 3" />
             )}
           </Images>
 
