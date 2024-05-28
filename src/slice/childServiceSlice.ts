@@ -26,11 +26,11 @@ const childServiceSlice = createSlice({
         })
         .addCase(listOfChildService.fulfilled, (state, action) => {
           state.loading = false;
-          state.childService = action.payload.response.body;
+          state.childService = action.payload?.response?.body;
         })
         .addCase(listOfChildService.rejected, (state, action: PayloadAction<any>) => {
           state.loading = false;
-          state.error = action.payload.body;
+          state.error = action.payload?.body;
         });
     },
   });

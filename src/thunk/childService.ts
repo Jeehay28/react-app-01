@@ -9,7 +9,7 @@ export const listOfChildService = createAsyncThunk(
   "childService/list",
   async (payload: ListOfChildServicePayload, { rejectWithValue }) => {
     const { q } = payload;
-    const serviceKey = process.env.REACT_APP_PLANT_BOOK_SERVICE_KEY as string;
+    const serviceKey = process.env.REACT_APP_SERVICE_KEY as string;
     const url = "https://apis.data.go.kr/1400119/ChildService1/childIlstrInfo";
     const params = {
       serviceKey: serviceKey,
